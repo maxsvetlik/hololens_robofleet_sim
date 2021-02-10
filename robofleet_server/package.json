@@ -1,0 +1,40 @@
+{
+  "name": "robofleet_server",
+  "version": "1.0.0",
+  "description": "RoboFleet 2.0 Server",
+  "main": "dist/index.js",
+  "repository": "https://github.com/ut-amrl/robofleet_server",
+  "author": "Logan Zartman <logan.zartman@utexas.edu>",
+  "private": true,
+  "scripts": {
+    "build": "tsc",
+    "deploy": "yarn build && mkdir -p deploy && cp -R node_modules dist deploy",
+    "start": "yarn build && node dist/index.js",
+    "test": "yarn build && jest"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.6",
+    "@types/ip6addr": "^0.2.0",
+    "@types/leveldown": "^4.0.2",
+    "@types/levelup": "^4.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "flatbuffers": "^1.12.0",
+    "google-auth-library": "^6.0.2",
+    "ip6addr": "^0.2.3",
+    "leveldown": "^5.6.0",
+    "levelup": "^4.4.0",
+    "npm": "^6.14.8",
+    "ws": "^7.3.0"
+  },
+  "devDependencies": {
+    "@types/flatbuffers": "^1.10.0",
+    "@types/jest": "^26.0.0",
+    "@types/node": "^14.0.6",
+    "@types/ws": "^7.2.4",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.1.0",
+    "typescript": "^3.9.3"
+  }
+}
